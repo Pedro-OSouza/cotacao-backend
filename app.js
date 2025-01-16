@@ -13,6 +13,10 @@ app.use(
   );
 app.use(express.json());
 
+app.get("/", () => {
+    console.log("Hello World")
+})
+
 app.get('/api/historical/:moeda', async (req, res) => {
     const { moeda } = req.params;
     const dias = 30
