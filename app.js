@@ -6,7 +6,11 @@ require('dotenv').config();
 
 const app = express();
 
-app.use(cors());
+app.use(
+    cors({
+      origin: "https://cotacao-frontend.vercel.app", // Apenas o frontend pode fazer requisições
+    })
+  );
 app.use(express.json());
 
 app.get('/api/historical/:moeda', async (req, res) => {
