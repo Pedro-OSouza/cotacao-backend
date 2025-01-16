@@ -8,7 +8,7 @@ const app = express();
 
 app.use(
     cors({
-      origin: "https://cotacao-moedas-frontend.vercel.app/", // Apenas o frontend pode fazer requisições
+      origin: "*", // Apenas o frontend pode fazer requisições
     })
   );
 app.use(express.json());
